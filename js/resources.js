@@ -6,6 +6,7 @@
  */
 (function() {
   var resourceCache = {};
+  var loading = [];
   var readyCallbacks = [];
 
   /* This is the publicly accessible image loading function. It accepts
@@ -36,7 +37,7 @@
   function _load(url) {
     if (resourceCache[url]) {
       /* If this URL has been previously loaded it will exist within
-       * our resourceCache array. Just return that image rather than
+       * our resourceCache array. Just return that image rather
        * re-loading the image.
        */
       return resourceCache[url];

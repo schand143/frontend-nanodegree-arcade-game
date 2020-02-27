@@ -16,7 +16,7 @@
 var Engine = (function(global) {
   /* Predefine the variables we'll be using within this scope,
    * create the canvas element, grab the 2D context for that canvas
-   * set the canvas element's height/width and add it to the DOM.
+   * set the canvas elements height/width and add it to the DOM.
    */
   var doc = global.document,
     win = global.window,
@@ -78,7 +78,7 @@ var Engine = (function(global) {
    * on the entities themselves within your app.js file).
    */
   function update(dt) {
-    // updateEntities(dt);
+    updateEntities(dt);
     // checkCollisions();
   }
 
@@ -174,7 +174,8 @@ var Engine = (function(global) {
     'images/water-block.png',
     'images/grass-block.png',
     'images/enemy-bug.png',
-    'images/char-boy.png'
+    'images/char-boy.png',
+    'images/char-cat-girl.png'
   ]);
   Resources.onReady(init);
 
